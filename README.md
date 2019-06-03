@@ -32,7 +32,7 @@ Your app should now be up and running! Edit a component file in `src` and your a
 
 If you'd rather use SASS instead of SCSS, change `<style type="text/scss">` to `<style type="text/sass">` in your `src/App.svelte`, or remove the `type` tag entirely, to use vanilla CSS.
 
-*Note you might need to add `"svelte.language-server.runtime": "file:///path/to/your/node.exe"` to your VS Code preferences.*
+*Note you might need to add `"svelte.language-server.runtime": "file:///path/to/your/node.exe"` to your VS Code preferences if you're using the Svelte extension, and want propper syntax highlighting.*
 
 
 ## Compile app

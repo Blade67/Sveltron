@@ -5,7 +5,7 @@ This is a boilerplate for [Svelte](https://svelte.dev) using [ElectronJS](https:
 To create a new project based on this boilerplate:
 
 ```bash
-git clone https://github.com/Blade67/Svelectron
+git clone https://github.com/Blade67/Sveltron
 ```
 
 *Note that you will need to have [Node.js](https://nodejs.org) installed.*
@@ -16,7 +16,7 @@ git clone https://github.com/Blade67/Svelectron
 Install the dependencies...
 
 ```bash
-cd Svelectron
+cd Sveltron
 npm install
 ```
 

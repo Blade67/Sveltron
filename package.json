@@ -24,5 +24,9 @@
     "dev": "concurrently \"run-p start:dev autobuild\" \"electron .\"",
     "start": "sirv public",
     "start:dev": "sirv public --dev"
+  },
+  "dependencies": {
+    "postcss": "^8.2.4",
+    "postcss-import": "^14.0.0"
   }
 }

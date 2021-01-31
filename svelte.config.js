@@ -7,7 +7,6 @@ module.exports = {
         // enable run-time checks when not in production
         dev: !production,
     },
-    sass: true,
     // Setup the preproccess for svelte, and tell it to use postcss
     preprocess: autoPreprocess({
         postcss: require('./postcss.config.js'),

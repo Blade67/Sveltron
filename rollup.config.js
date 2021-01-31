@@ -13,7 +13,7 @@ export default {
         sourcemap: false,
         format: 'iife',
         name: 'app',
-        file: 'public/bundle.js',
+        file: 'public/build/bundle.js',
     },
     plugins: [
         svelte(require('./svelte.config.js')),

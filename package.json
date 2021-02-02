@@ -26,5 +26,5 @@
     "dev": "concurrently \"run-p start:dev autobuild\" \"electron .\"",
     "start": "sirv public",
     "start:dev": "sirv public --dev"
-  },
+  }
 }

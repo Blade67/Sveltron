@@ -1,27 +1,17 @@
-const sass = require('node-sass');
+const autoPreprocess = require('svelte-preprocess');
+const path = require('path');
+
+const production = !process.env.ROLLUP_WATCH;
 
 module.exports = {
-    preprocess: {
-        style: async ({ content, attributes }) => {
-            if (attributes.type !== 'text/scss' && attributes.lang !== 'scss') return; // lang is now taken into account
-
-            return new Promise((resolve, reject) => {
-                sass.render(
-                    {
-                        data: content,
-                        sourceMap: false,
-                        outFile: 'x', // this is necessary, but is ignored
-                    },
-                    (err, result) => {
-                        if (err) return reject(err);
-
-                        resolve({
-                            code: result.css.toString(),
-                            map: result.map ? result.map.toString() : ""
-                        });
-                    },
-                );
-            });
-        },
+    compilerOptions: {
+        // enable run-time checks when not in production
+        dev: !production,
     },
+    // Setup the preproccess for svelte, and tell it to use postcss
+    preprocess: autoPreprocess({
+        includePaths: [path.join(__dirname, 'relative/path')],
+        postcss: require('./postcss.config.js'),
+        defaults: { style: 'postcss' },
+    }),
 };

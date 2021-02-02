@@ -1,4 +1,5 @@
 const autoPreprocess = require('svelte-preprocess');
+const path = require('path');
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -9,6 +10,7 @@ module.exports = {
     },
     // Setup the preproccess for svelte, and tell it to use postcss
     preprocess: autoPreprocess({
+        includePaths: [path.join(__dirname, 'relative/path')],
         postcss: require('./postcss.config.js'),
         defaults: { style: 'postcss' },
     }),

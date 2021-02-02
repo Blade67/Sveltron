@@ -16,7 +16,9 @@
     "sirv-cli": "^1.0.11",
     "svelte": "^3.32.1",
     "@rollup/plugin-commonjs": "^17.1.0",
-    "svelte-preprocess": "^4.6.5"
+    "svelte-preprocess": "^4.6.5",
+    "postcss": "^8.2.4",
+    "postcss-import": "^14.0.0"
   },
   "scripts": {
     "build": "rollup -c",
@@ -25,8 +27,4 @@
     "start": "sirv public",
     "start:dev": "sirv public --dev"
   },
-  "dependencies": {
-    "postcss": "^8.2.4",
-    "postcss-import": "^14.0.0"
-  }
 }

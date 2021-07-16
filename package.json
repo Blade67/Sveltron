@@ -8,7 +8,7 @@
         "dev:svelte": "rollup -c -w",
         "start:svelte": "sirv public --no-clear",
         "dev:electron": "electron .",
-        "dev": "npm run dev:electron && npm run dev:svelte",
+        "dev": "concurrently \"npm run dev:electron\" \"npm run dev:svelte\"",
         "start": "concurrently \"npm run dev:electron\" \"npm run start:svelte\""
     },
     "devDependencies": {

@@ -6,6 +6,14 @@ try {
     require("electron-reloader")(module);
 } catch (_) {}
 
+const gotTheLock = app.requestSingleInstanceLock();
+
+if (!gotTheLock) {
+    app.quit();
+} else {
+    app.on("ready", createWindow);
+}
+
 function createWindow() {
     mainWindow = new BrowserWindow({
         width: 800,
@@ -22,8 +30,6 @@ function createWindow() {
         mainWindow = null;
     });
 }
-
-app.on("ready", createWindow);
 
 app.on("window-all-closed", function () {
     if (process.platform !== "darwin") app.quit();

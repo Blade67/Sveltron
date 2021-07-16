@@ -7,9 +7,9 @@
         "build:svelte": "rollup -c",
         "dev:svelte": "rollup -c -w",
         "start:svelte": "sirv public --no-clear",
-        "start:electron": "electron .",
-        "dev": "concurrently --kill-others \"npm run start:electron\" \"npm run dev:svelte\"",
-        "start": "concurrently --kill-others \"npm run start:electron\" \"npm run start:svelte\""
+        "dev:electron": "electron .",
+        "dev": "npm run dev:electron && npm run dev:svelte",
+        "start": "concurrently \"npm run dev:electron\" \"npm run start:svelte\""
     },
     "devDependencies": {
         "@rollup/plugin-commonjs": "^17.0.0",

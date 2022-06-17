@@ -15,7 +15,7 @@
         "@rollup/plugin-commonjs": "^17.0.0",
         "@rollup/plugin-node-resolve": "^11.0.0",
         "concurrently": "^6.2.0",
-        "electron": "^13.1.7",
+        "electron": "^15.5.5",
         "electron-reloader": "^1.2.1",
         "postcss": "^8.3.5",
         "postcss-import": "^14.0.2",
